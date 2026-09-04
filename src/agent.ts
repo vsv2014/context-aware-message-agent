@@ -11,7 +11,7 @@ const daysToMove = (r: AnyRecord) => {
 };
 
 const eligible = (r: AnyRecord): string[] => (r.channel_preferences ?? [])
-  .filter((c: string) => r.consent?.[`${c}_opt_in`] === true);
+  .filter((c: string) => ["sms", "email", "voice"].includes(c) && r.consent?.[`${c}_opt_in`] === true);
 
 function sendAt(r: AnyRecord, channel: string, examples: AnyRecord[]): string {
   const zone = r.input?.timezone ?? "UTC";
