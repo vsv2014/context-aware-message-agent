@@ -1,0 +1,7 @@
+{
+  "name": "context-aware-message-agent",
+  "private": true,
+  "scripts": {"start": "tsx src/agent.ts", "test": "tsx test/agent.test.ts", "evaluate": "tsx src/evaluator.ts", "web": "tsx src/server.ts"},
+  "dependencies": {"luxon": "^3.5.0"},
+  "devDependencies": {"@types/luxon": "^3.4.2", "@types/node": "^22.10.0", "tsx": "^4.19.0", "typescript": "^5.6.0"}
+}
